@@ -5,7 +5,7 @@ import os
 
 # setup the pi to do somet things
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(5, GPIO.IN, pull_up_down = GPIO.PUD_UP)
+GPIO.setup(5, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
 
 # define method to run when the event fires
 def Shutdown(channel):

@@ -29,20 +29,21 @@ GPIO.setup(5, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
 right = True
 left = False
 def Shutdown(channel):
-    GPIO.output(23, right)
-    GPIO.output(12, right)
-    GPIO.output(16, right)
-    GPIO.output(20, right)
-    GPIO.output(22, left)
-    GPIO.output(6, left)
-    GPIO.output(13, left)
-    GPIO.output(26, left)
-    right = not right
-    left = not left
+    print 'BUTTON HAS BEEN PRESSED'
+    # GPIO.output(23, right)
+    # GPIO.output(12, right)
+    # GPIO.output(16, right)
+    # GPIO.output(20, right)
+    # GPIO.output(22, left)
+    # GPIO.output(6, left)
+    # GPIO.output(13, left)
+    # GPIO.output(26, left)
+    # right = not right
+    # left = not left
 # Add our function to execute when the button pressed event happens
-GPIO.add_event_detect(5, GPIO.FALLING, callback = Shutdown, bouncetime = 2000)
+GPIO.add_event_detect(5, GPIO.FALLING, callback = Shutdown, bouncetime = 500)
 # Now wait!
 while True:
-   time.sleep(1)
+   time.sleep(0.01)
 
 # message = input("Press enter to quit\n\n") # Run until someone presses enter
