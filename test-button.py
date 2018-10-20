@@ -37,8 +37,8 @@ def Shutdown(channel):
     GPIO.output(6, left)
     GPIO.output(13, left)
     GPIO.output(26, left)
-    right = !right
-    left = !left
+    right = not right
+    left = not left
 # Add our function to execute when the button pressed event happens
 GPIO.add_event_detect(5, GPIO.FALLING, callback = Shutdown, bouncetime = 2000)
 # Now wait!
